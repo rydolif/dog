@@ -55,7 +55,7 @@ gulp.task('minjs', function() {
 		'app/libs/jquery.mask.min.js', 					//----форма
 		'app/libs/jquery.popupoverlay.js', 				//----модалки
 		'app/libs/slick/slick.js', 					//----слайдер
-		 // 'app/libs/flipclock/flipclock.js',
+		 'app/libs/flipclock/flipclock.js',
 		// 'app/libs/swiper/swiper.min.js', 			//----слайдер
 		'app/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
 		// 'app/libs/jquery.spincrement.min.js', 		//----цифри анімованні
@@ -78,7 +78,7 @@ gulp.task('js', function() {
 		'app/libs/jquery.mask.min.js', 					//----форма
 		'app/libs/jquery.popupoverlay.js', 				//----модалки
 		'app/libs/slick/slick.js', 					//----слайдер
-		 // 'app/libs/flipclock/flipclock.js',			//----таймер
+		 'app/libs/flipclock/flipclock.js',			//----таймер
 		// 'app/libs/swiper/swiper.min.js', 			//----слайдер
 		'app/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
 		// 'app/libs/jquery.spincrement.min.js', 		//----цифри анімованні

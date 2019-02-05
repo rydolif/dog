@@ -11,10 +11,12 @@
 	
 
 	.hero
-		padding-bottom: 200px
-
+		padding-bottom: 60px
 		ul
 			width: 60%
+
+	.image
+		padding-top: 20px
 
 	.section-form__bg
 		right: 0
@@ -34,6 +36,13 @@
 		&__logo
 			img
 				width: 150px
+
+	.benefits__item_active
+		padding: 10px
+
+
+	.flip-clock-wrapper
+		width: 100%
 
 
 @media only screen and (max-width : 992px)
@@ -74,8 +83,8 @@
 		display: block
 	
 	.hero
-		background-position: center left
-
+		padding-bottom: 40px
+	
 	h2
 		font-size: 28px
 		margin-bottom: 40px
@@ -88,9 +97,14 @@
 
 	.benefits__item
 		margin-bottom: 15px
+		width: 47%
+
+
 
 	.stock
-		padding-top: 230px
+		padding: 40px 0
+		background-image: none
+		background-color: $green
 
 		h3
 			font-size: 28px
@@ -107,6 +121,26 @@
 		&__number
 			top: 40px
 			font-size: 40px
+
+
+	.order
+		&__list
+			flex-wrap: wrap
+			margin-bottom: 15px
+
+			&::before
+				display: none
+
+			p
+				&::before
+					display: none
+
+		&__item
+			width: 47%
+			margin-bottom: 15px
+
+			img
+				margin-bottom: 20px
 
 	.section-form__bg
 		width: 95%
@@ -125,14 +159,21 @@
 
 		img
 			margin-left: 10px
+			width: 25px
 
 	.about, .solution, .gallery, .reviews, .order
 		padding: 40px 0
 
 
 @media only screen and (max-width : 767px)
+	.flip-clock-wrapper
+		width: 51%
+
+	.stock__white
+		margin-top: 20px
+
 	.hero
-		padding: 100px 0 200px
+		padding: 100px 0 40px
 
 		p
 			font-size: 18px
@@ -170,24 +211,6 @@
 		&__item
 			margin-bottom: 15px
 
-	.order
-		&__list
-			flex-wrap: wrap
-			margin-bottom: 15px
-
-			&::before
-				display: none
-
-			p
-				&::before
-					display: none
-
-		&__item
-			width: 47%
-			margin-bottom: 15px
-
-			img
-				margin-bottom: 20px
 
 	.section-form
 		&__bg
@@ -210,11 +233,17 @@
 			margin-bottom: 15px
 
 
-
 @media only screen and (max-width : 576px)
-	.header
+	.flip-clock-wrapper
+		width: 60%
 
 @media only screen and (max-width : 480px)
+	.modal
+		max-width: 290px
+
+	.flip-clock-wrapper
+		width: 80%
+
 	h2,
 	.order h3,
 	.order h4
@@ -239,10 +268,6 @@
 		&__decor
 			margin-bottom: 10px
 
-	.stock
-		padding: 40px 0
-		background-image: none
-		background-color: $green
 
 	.order__item
 		width: 100%
@@ -291,5 +316,7 @@
 			height: 260px
 
 
-
+@media only screen and (max-width : 360px)
+	.flip-clock-wrapper
+		width: 100%
 

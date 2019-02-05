@@ -1,22 +1,34 @@
 $(function() {
 
-//-------------------------------reviews---------------------------------------
-  // $('.reviews__slider').slick({
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 2,
-  //   centerMode: true,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   autoplaySpeed: 4000,
-  //   dots: true,
-  // });
 
+//------------------------------clokc-----------------------------
+  var clock;
+  $(document).ready(function() {
+    var clock;
+    clock = $('.clock').FlipClock({
+          // clockFace: 'DailyCounter',
+          // autoStart: false,
+          // callbacks: {
+          //   stop: function() {
+          //     $('.message').html('The clock has stopped!')
+          //   }
+          // }
+          language: 'ru'
+      });
+          
+      clock.setTime(220880);
+      clock.setCountdown(true);
+      clock.start();
+  });
+
+
+//-------------------------------reviews---------------------------------------
   $('.reviews__slider').slick({
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
+    arrow: true
   });
 
 //-------------------------------gallery---------------------------------------
@@ -100,43 +112,25 @@ $(function() {
   });
 
 //-------------------------скорость якоря---------------------------------------
-  $(".header__list").on("click","a", function (event) {
+  $(".click").on("click","a", function (event) {
       event.preventDefault();
       var id  = $(this).attr('href'),
           top = $(id).offset().top;
       $('body,html').animate({scrollTop: top - 60}, 'slow', 'swing');
   //--------------------закриття меню при кліку на ссилку якоря--------------------
-     // $('.hamburger').removeClass('hamburger--active');
-     // $('.header-menu').removeClass('header-menu');
-     // $('.header--active').removeClass('header--active');
-     // $('.nav--active').removeClass('nav--active');
+     $('.hamburger').removeClass('hamburger--active');
+     $('.header--menu').removeClass('header--menu');
+     $('.header--active').removeClass('header--active');
+     $('.nav--active').removeClass('nav--active');
 
   });
 
-  // //-------------------------------анімація цифр---------------------------------------
-  //   var show = true;
-  //   var countbox = ".about-statistics__container";
-  //   $(window).on("scroll load resize", function () {
-  //       if (!show) return false; // Отменяем показ анимации, если она уже была выполнена
-  //       var w_top = $(window).scrollTop(); // Количество пикселей на которое была прокручена страница
-  //       var e_top = $(countbox).offset().top; // Расстояние от блока со счетчиками до верха всего документа
-  //       var w_height = $(window).height(); // Высота окна браузера
-  //       var d_height = $(document).height(); // Высота всего документа
-  //       var e_height = $(countbox).outerHeight(); // Полная высота блока со счетчиками
-  //       if (w_top + 500 >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
-  //           $('.about-statistics__item h3').spincrement({
-  //               thousandSeparator: "",
-  //               duration: 2000
-  //           });
-  //           show = false;
-  //       }
-  //   });
 
   
 });
 
 //----------------------------------------preloader----------------------------------
 
-  // $(window).on('load', function(){
-  //   $('.preloader').delay(1000).fadeOut('slow');
-  // });
+  $(window).on('load', function(){
+    $('.preloader').delay(1000).fadeOut('slow');
+  });
